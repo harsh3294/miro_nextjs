@@ -3,6 +3,7 @@ import "./globals.css";
 import { Suspense } from "react";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Loading } from "@/components/auth/loading";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Miro Clone | The Visual Workspace for Innovations.",
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense fallback={<Loading />}>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          <ConvexClientProvider>
+            <Toaster />
+            {children}
+          </ConvexClientProvider>
         </Suspense>
       </body>
     </html>
