@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Suspense } from "react";
+import { ConvexClientProvider } from "@/providers/convex-client-provider";
+import { Loading } from "@/components/auth/loading";
 
 export const metadata: Metadata = {
   title: "Miro Clone | The Visual Workspace for Innovations.",
@@ -14,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Suspense fallback={<Loading />}>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </Suspense>
+      </body>
     </html>
   );
 }
