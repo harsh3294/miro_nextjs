@@ -80,7 +80,6 @@ export const update = mutation({
     return board;
   },
 });
-
 export const favorite = mutation({
   args: { id: v.id("boards"), orgId: v.string() },
   handler: async (ctx, args) => {
