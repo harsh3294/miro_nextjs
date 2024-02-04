@@ -16,7 +16,7 @@ export const Canvas = ({ boardId }: CanvasPProps) => {
       <Info boardId={boardId} />
       <Participants />
       <Toolbar />
-      <SelectionTools />
+      {/* <SelectionTools /> */}
     </main>
   );
 };
