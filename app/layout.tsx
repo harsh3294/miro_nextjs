@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Loading } from "@/components/auth/loading";
 import { Toaster } from "@/components/ui/sonner";
+import { ModalProvider } from "@/providers/modal-provider";
 
 export const metadata: Metadata = {
   title: "Miro Clone | The Visual Workspace for Innovations.",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>
           <ConvexClientProvider>
             <Toaster />
+            <ModalProvider />
             {children}
           </ConvexClientProvider>
         </Suspense>
