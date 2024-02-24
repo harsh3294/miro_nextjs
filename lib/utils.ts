@@ -1,4 +1,4 @@
-import { Camera } from "@/types/canvas";
+import { Camera, Color } from "@/types/canvas";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
