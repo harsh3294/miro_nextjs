@@ -50,6 +50,7 @@ export const Canvas = ({ boardId }: CanvasPProps) => {
     r: 0,
     g: 0,
     b: 0,
+    a: 1,
   });
 
   const history = useHistory();
@@ -276,6 +277,7 @@ export const Canvas = ({ boardId }: CanvasPProps) => {
         undo={history.undo}
         redo={history.redo}
       />
+      <SelectionTools camera={camera} setLastUsedColor={setLastUsedColor} />
       <svg
         className="h-[100vh] w-[100vw]"
         onWheel={onWheel}
@@ -301,7 +303,6 @@ export const Canvas = ({ boardId }: CanvasPProps) => {
           <CursorsPresence />
         </g>
       </svg>
-      {/* <SelectionTools /> */}
     </main>
   );
 };

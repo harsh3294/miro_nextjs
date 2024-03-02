@@ -44,6 +44,7 @@ export type Color = {
     r: number;
     g: number;
     b: number;
+    a: number;
 };
 export type Camera = {
     x: number;
@@ -128,4 +129,12 @@ export enum Side {
     Left = 4,
     Right = 8,
 };
+  
+
+export type Position= {
+    top: string;
+    left: string;
+    right: string;
+    bottom: string;
+  }
   
