@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Stack Realtime Miro Clone with Next.js 14 App Router: React, Tailwind
 
-## Getting Started
+![Full Stack Miro Clone](https://harsh3294.github.io/StaticData/Miro/Images/thumbnail.png)
 
-First, run the development server:
+## Key Features
+
+- **🛠️ Whiteboard from scratch**: Create and customize your whiteboard canvas according to your needs.
+- **🧰 Toolbar with Text, Shapes, Sticky Notes & Pencil**: Access a variety of tools for drawing, writing text, adding shapes, and using sticky notes.
+- **🪄 Layering functionality**: Organize your elements with layering functionality to control their stacking order.
+- **🎨 Coloring system**: Choose from a wide range of colors to make your drawings vibrant and expressive.
+- **↩️ Undo & Redo functionality**: Easily correct mistakes or redo actions with the undo and redo functionality.
+- **⌨️ Keyboard shortcuts**: Enhance productivity with keyboard shortcuts for common actions.
+- **🤝 Real-time collaboration**: Collaborate with others in real-time, allowing multiple users to work on the whiteboard simultaneously.
+- **💾 Real-time database**: Utilize a real-time database to ensure seamless synchronization of data across all connected clients.
+- **🔐 Authentication, organizations, and invites**: Securely authenticate users, manage organizations, and invite others to collaborate on whiteboard projects.
+- **⭐️ Favoriting functionality**: Mark your favorite whiteboards for easy access and organization.
+- **🌐 Next.js 14 framework**: Built using the Next.js framework, providing server-side rendering and efficient client-side navigation.
+- **💅 TailwindCSS & ShadcnUI styling**: Employ modern styling frameworks like TailwindCSS and ShadcnUI for responsive and visually appealing designs.
+
+
+## Prerequisites
+
+Before getting started, ensure you have the following:
+
+- Node version 14.x
+  
+## Cloning the Repository
+
+To clone the repository, run the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/harsh3294/miro_nextjs.git
+```
+## Installing Packages
+
+```bash
+cd next14-miro-clone
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup .env file
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+LIVEBLOCKS_SECRET_KEY=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setting up Convex
 
-## Learn More
+```bash 
+npx convex dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Starting the App
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash 
+npm run dev
+```
